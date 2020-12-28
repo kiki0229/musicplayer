@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?4r66v3');
+  src: url('../fonts/icomoon.eot?4r66v3#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?4r66v3') format('truetype'), url('../fonts/icomoon.woff?4r66v3') format('woff'), url('../fonts/icomoon.svg?4r66v3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+.liclstyle {
+  background-color: #8edde7 !important;
+}
+body {
+  background-color: powderblue;
+}
+body .bdiv {
+  background-size: cover;
+  width: 820px;
+  height: 580px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -290px 0 0 -410px;
+}
+body .bdiv .header {
+  box-shadow: 0 1px 1px 1px #6666664f;
+  width: 100%;
+  height: 45px;
+  background-color: rgba(0, 217, 255, 0.986);
+  line-height: 45px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+}
+body .bdiv .header img {
+  width: 38px;
+  float: left;
+  border-radius: 50%;
+  margin-top: 3.5px;
+  margin-right: 7px;
+}
+body .bdiv .header h3 {
+  font-size: 20px;
+  color: white;
+}
+body .bdiv .header input {
+  top: 5.5px;
+  right: 7px;
+  outline: none;
+  border: none;
+  height: 33px;
+  width: 250px;
+  border-radius: 15px;
+  background-color: #ecf5fa;
+  padding: 0 15px;
+  position: absolute;
+  box-sizing: border-box;
+}
+body .bdiv .header span {
+  font-family: 'icomoon';
+  position: absolute;
+  top: 0px;
+  right: 18px;
+  color: #8a8a8a;
+}
+body .bdiv .center {
+  width: 100%;
+  height: 488px;
+  display: flex;
+}
+body .bdiv .center div {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+body .bdiv .center .cleft {
+  flex: 1;
+  margin-right: 5px;
+  overflow: auto;
+}
+body .bdiv .center .cleft ul {
+  list-style: none;
+}
+body .bdiv .center .cleft ul li {
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+body .bdiv .center .cleft ul li .broadcast {
+  font-family: 'icomoon';
+  margin-left: 15px;
+  font-weight: bold;
+  color: #d81e06;
+}
+body .bdiv .center .cleft ul li .videoico {
+  font-family: 'icomoon';
+  color: #1296db;
+  margin-right: 15px;
+  font-weight: 500;
+  font-size: 20px;
+}
+body .bdiv .center .cleft ul li .name {
+  flex: 1;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+body .bdiv .center .cleft ul li:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.733);
+}
+body .bdiv .center .zcenter {
+  flex: 1.7;
+  margin-right: 5px;
+  position: relative;
+}
+body .bdiv .center .zcenter img {
+  display: block;
+  position: absolute;
+}
+body .bdiv .center .zcenter .img1 {
+  height: 200px;
+  top: -3px;
+  left: 40%;
+  z-index: 4;
+  transform: rotate(-60deg);
+  transform-origin: top;
+}
+body .bdiv .center .zcenter .img2 {
+  width: 290px;
+  top: 50px;
+  left: 50%;
+  margin-left: -140px;
+  z-index: 3;
+}
+body .bdiv .center .zcenter .img3 {
+  width: 168px;
+  left: 50%;
+  margin-left: -85px;
+  top: 104px;
+}
+body .bdiv .center .cright {
+  flex: 1;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+body .bdiv .center .cright .title {
+  background: none;
+  font-weight: bold;
+}
+body .bdiv .center .cright ul {
+  list-style: none;
+}
+body .bdiv .center .cright ul li {
+  overflow: hidden;
+  word-break: break-all;
+  margin-top: 13px;
+}
+body .bdiv .center .cright ul li img {
+  width: 40px;
+  float: left;
+  margin-right: 5px;
+}
+body .bdiv .center .cright ul li div {
+  float: left;
+  width: 145px;
+  background: none;
+}
+body .bdiv .center .cright ul li div h4 {
+  margin-top: 5px;
+  margin-left: 8px;
+}
+body .bdiv .center .cright ul li div span {
+  font-size: 14px;
+  color: #666666;
+}
+body .bdiv .bottom {
+  height: 47px;
+  background-color: white;
+  box-shadow: 0 -1px 1px 1px #6666664f;
+}
+body .bdiv .bottom audio {
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+body .bdiv video {
+  width: 550px;
+  height: 380px;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  margin: -210px 0 0 -170px;
+  position: absolute;
+  display: none;
+  outline: none;
+}

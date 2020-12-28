@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kiki音乐播放器</title>
+    <link rel="icon" href="img/cutcamera.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="vue.js"></script>
+    <script src="https://unpkg.com/axios@0.21.0/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <!-- https://autumnfish.cn/search?keywords= 搜索列表-->
+    <!-- https://autumnfish.cn/song/url?id= 点击播放-->
+    <!-- https://autumnfish.cn/song/detail?ids= 图片 -->
+    <!-- https://autumnfish.cn/comment/hot?type=0&id= 热门评论 -->
+    <!-- https://autumnfish.cn/mv/url?id= mv播放 -->
+    <div class="bdiv">
+        <div class="header">
+            <img src="./img/cutcamera.png" alt="">
+            <h3>kiki音乐播放器</h3>
+            <input type="text" v-model='mtext' @keyup.enter='sendReqlist()'>
+            <span></span>
+        </div>
+        <div class="center">
+            <div class="cleft">
+                <ul>
+                    <li v-for="(item,index) in sendlist" :class="{liclstyle: index == licl}">
+                        <span class="broadcast" @click="muiclick(item.id,index)"></span>
+                        <span class="name">{{item.name}}</span>
+                        <span class="videoico" @click="mvclick(item.mvid)" v-if="item.mvid!=0"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="zcenter">
+                <img class="img1" src="./img/timg (1).png" alt="">
+                <img class="img2" src="./img/timg.png" alt="">
+                <img class="img3" :src="imgurl" alt="">
+            </div>
+            <div class="cright">
+                <div class="title">热门留言</div>
+                <ul>
+                    <li v-for="item in users">
+                        <img :src="item.user.avatarUrl" alt="用户头像">
+                        <div>
+                            <h4>{{item.user.nickname}}</h4>
+                            <span>{{item.content}}</span>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            <audio :src="murl" controls="controls" autoplay="autoplay"></audio>
+        </div>
+        <!-- {{mtext}} {{sendlist}} -->
+        <!-- mv播放 -->
+        <video id="mvbroad" :src="mvurl" controls="controls" autoplay="autoplay"></video>
+    </div>
+
+
+    <script src="./案例vue代码.js"></script>
+
+</body>
+
+</html>
